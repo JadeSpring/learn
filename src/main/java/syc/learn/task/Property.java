@@ -1,4 +1,4 @@
-package syc.com.task;
+package syc.learn.task;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package syc.com.spring;
+package syc.learn.spring;
 
 import org.springframework.stereotype.Component;
 

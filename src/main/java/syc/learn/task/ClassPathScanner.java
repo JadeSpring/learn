@@ -1,8 +1,7 @@
-package syc.com.task;
+package syc.learn.task;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.lang.annotation.Annotation;
 import java.util.HashSet;
 import java.util.Set;
 

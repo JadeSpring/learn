@@ -1,4 +1,4 @@
-package syc.com.task;
+package syc.learn.task;
 
 public interface MyBeanPostProcessor {
     Object beforeInit(Object bean, String name);

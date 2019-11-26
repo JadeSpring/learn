@@ -1,4 +1,4 @@
-package syc.com.spring;
+package syc.learn.spring;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;

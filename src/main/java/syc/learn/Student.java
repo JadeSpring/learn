@@ -1,4 +1,4 @@
-package syc.com;
+package syc.learn;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package syc.com;
+package syc.learn;
 
 import static org.junit.Assert.assertTrue;
 

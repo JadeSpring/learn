@@ -1,4 +1,4 @@
-package syc.com;
+package syc.learn;
 
 /**
  * Hello world!

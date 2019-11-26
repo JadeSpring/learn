@@ -1,4 +1,4 @@
-package syc.com.task;
+package syc.learn.task;
 
 public interface MyInstantiateBeanPostProcessor extends MyBeanPostProcessor {
     Object beforeInstantiation(Class<?> beanClass, String beanName);

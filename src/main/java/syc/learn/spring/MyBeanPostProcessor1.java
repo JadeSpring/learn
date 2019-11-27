@@ -10,6 +10,11 @@ public class MyBeanPostProcessor1 implements BeanPostProcessor, Ordered {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 //        if (beanName.endsWith("Bean"))
+
+        if (beanName.equals("someBean")){
+//            return null;
+        }
+
         if (bean instanceof SomeBean) {
             SomeBean sb = (SomeBean)bean;
             sb.setA(1);
@@ -20,7 +25,9 @@ public class MyBeanPostProcessor1 implements BeanPostProcessor, Ordered {
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-//        if (beanName.endsWith("Bean"))
+        if (beanName.equals("someBean")){
+//            return null;
+        }
             System.out.println(beanName + "  MyBeanPostProcessor1#postProcessAfterInitialization");
         return bean;
     }

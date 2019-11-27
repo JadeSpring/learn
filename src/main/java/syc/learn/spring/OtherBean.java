@@ -9,6 +9,7 @@ import javax.annotation.PostConstruct;
 @Component
 public class OtherBean {
 
+    @Autowired
     private SomeBean someBean;
 
     public OtherBean() {
@@ -25,8 +26,4 @@ public class OtherBean {
         System.out.println(someBean);
     }
 
-    @Autowired
-    public void setSomeBean(SomeBean someBean) {
-        this.someBean = someBean;
-    }
 }

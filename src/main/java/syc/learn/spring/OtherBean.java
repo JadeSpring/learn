@@ -7,9 +7,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component
-@Data
 public class OtherBean {
-    @Autowired
+
     private SomeBean someBean;
 
     public OtherBean() {
@@ -20,5 +19,14 @@ public class OtherBean {
     public void init(){
         System.out.println(someBean);
         System.out.println("========= OtherBean#init =========");
+    }
+
+    public void print(){
+        System.out.println(someBean);
+    }
+
+    @Autowired
+    public void setSomeBean(SomeBean someBean) {
+        this.someBean = someBean;
     }
 }

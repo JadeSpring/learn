@@ -11,4 +11,9 @@ public class BeanDefinition {
     private Class type;
     private List<Property> properties = new ArrayList<>();
     private List<Method> initMethodList = new ArrayList<>();
+
+    public static void main(String[] args) {
+        BeanDefinition bd = new BeanDefinition();
+        bd.setName("hello");
+    }
 }

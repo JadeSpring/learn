@@ -7,7 +7,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MyBeanPostProcessor implements BeanPostProcessor, Ordered {
+public class MyBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 //        if (beanName.endsWith("Bean"))
@@ -34,8 +34,8 @@ public class MyBeanPostProcessor implements BeanPostProcessor, Ordered {
         return bean;
     }
 
-    @Override
-    public int getOrder() {
-        return 3;
-    }
+//    @Override
+//    public int getOrder() {
+//        return 3;
+//    }
 }

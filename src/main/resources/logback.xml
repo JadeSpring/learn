@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- logback 配置文件 -->
+<!-- 加上debug属性即可输出logback日志状态 -->
+<configuration debug="true">
+    <!-- 定义一个用于将日志输出到控制台的appender -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- 输出格式 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="about" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- 输出格式 -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- logger用来定义个logger实例 -->
+    <!-- logger元素有name、level、additivity属性 -->
+    <!-- 可以包含0或多个<appender-ref>元素 -->
+    <!-- name属性指定logger名字，用.来组织logger之间的父子关系，e.g：a是a.b的父亲，是a.b.c的祖先 -->
+    <!-- level属性指定日志可以输出的日志级别，可选值：trace、debug、info、warn、error、all、off、inherited、null -->
+    <!-- 当level为inherited、null时，继承上一层的级别 -->
+    <!-- additivity属性默认为true，父logger中的appender会自动叠加到子logger中使用 -->
+    <logger name="a" level="info">
+    </logger>
+
+    <!--如果additivity属性设为false则不使用父logger的appender -->
+    <logger name="a.b" additivity="false">
+        <appender-ref ref="about"/>
+    </logger>
+
+    <!-- 指定root Logger实例的日志等级和使用的appender-->
+    <!-- root元素只有一个level属性，可选值：trace、debug、info、warn、error、all、off -->
+    <!-- 可以包含0或多个<appender-ref>元素 -->
+    <root level="debug">
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>

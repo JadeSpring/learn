@@ -34,11 +34,11 @@ public class HelloLogback {
      * 日志的打印级别为 p，Logger 实例的级别为 q，如果 p >= q，则该条日志可以打印出来。
      * 各级别的排序为：TRACE < DEBUG < INFO < WARN < ERROR
      * <p>
-     * 日志实例的等级为info，INFO 、 WARN 、ERROR 会输出，TRACE 、 DEBUG 不输出
+     * e.g: 日志实例的等级为info，INFO 、 WARN 、ERROR 会输出，TRACE 、 DEBUG 不输出
      */
     private static void selectionRule() {
         ch.qos.logback.classic.Logger parentLogger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger("syc.learn");
-//        parentLogger.setLevel(Level.INFO);
+        parentLogger.setLevel(Level.INFO);
 
         parentLogger.trace("trace parent");
         parentLogger.debug("debug parent");
@@ -82,12 +82,12 @@ public class HelloLogback {
     /**
      * appender 的叠加性
      * <p>
-     * logger L 的日志输出语句会遍历 L 和它的子级中所有的 appender。
+     * logger L 的日志输出语句会遍历 L 和它的父级中所有的 appender。
      * 这就是所谓的 appender 叠加性（appender additivity）
      * <p>
      * 如果 L 的子级 logger 为 P，且 P 设置了 additivity = false，
-     * 那么 L 的日志会在 L 所有 的 appender 包括 P 本身的 appender 中输出，
-     * 但是不会在 P 的子级 appender 中输出。
+     * 那么 P 的日志会在 P 本身的 appender 中输出，
+     * 但是不会在 L 及 L 的父级 appender 中输出。
      * <p>
      * logger 默认设置 additivity = true。
      */

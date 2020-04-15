@@ -5,4 +5,9 @@ package syc.learn.designpattern.factory.factorymethod;
  * @date 2020/4/14
  */
 public interface Phone {
+    /**
+     * 打电话
+     * @param number
+     */
+    void call(String number);
 }

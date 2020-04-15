@@ -5,4 +5,5 @@ package syc.learn.designpattern.factory.factorymethod;
  * @date 2020/4/14
  */
 public interface PhoneFactory {
+    Phone createPhone(int year);
 }

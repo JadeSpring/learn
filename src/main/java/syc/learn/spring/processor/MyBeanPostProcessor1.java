@@ -1,9 +1,9 @@
-package syc.learn.spring;
+package syc.learn.spring.processor;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
+import syc.learn.spring.domain.SomeBean;
 
 @Component
 public class MyBeanPostProcessor1 implements BeanPostProcessor {

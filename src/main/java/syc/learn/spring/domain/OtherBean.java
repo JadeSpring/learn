@@ -1,6 +1,5 @@
-package syc.learn.spring;
+package syc.learn.spring.domain;
 
-import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package syc.learn.spring;
+package syc.learn.spring.processor;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.PropertyValues;

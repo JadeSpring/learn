@@ -1,4 +1,4 @@
-package syc.learn.spring;
+package syc.learn.spring.domain;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;

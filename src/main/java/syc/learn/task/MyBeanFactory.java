@@ -1,6 +1,6 @@
 package syc.learn.task;
 
-import syc.learn.spring.SomeBean;
+import syc.learn.spring.domain.SomeBean;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

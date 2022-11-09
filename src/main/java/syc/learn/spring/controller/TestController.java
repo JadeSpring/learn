@@ -14,6 +14,7 @@ import syc.learn.spring.domain.Response;
 @CrossOrigin
 public class TestController {
 
+
     @RequestMapping("test")
     public Response test() {
         return Response.ok("test");

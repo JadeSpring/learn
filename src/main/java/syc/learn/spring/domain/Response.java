@@ -9,6 +9,7 @@ import lombok.Data;
 @Data
 public class Response {
     private int code;
+    private String msg;
     private Object data;
 
     public Response(int code, Object data) {
